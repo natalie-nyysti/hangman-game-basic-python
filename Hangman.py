@@ -57,8 +57,11 @@ hangman = [
 ]
 
 print("Welcome to Hangman!")
+time.sleep(1)
 print("You have", max_attempts, "attempts to guess the word.")
+time.sleep(1)
 print("The word has", len(words), "letters.")
+time.sleep(1)
 hint = input("Do you want a hint? (y/n): ")
 if hint.lower() == 'y':
     print("The word is related to fruit.")
@@ -88,6 +91,7 @@ while wrong_guesses < max_attempts and all(letter in guessed for letter in words
         wrong_guesses += 1
     
     if all(letter in guessed for letter in words)== True:
+        time.sleep(1)
         print("Congratulations! You guessed the word:", words)
 
 
